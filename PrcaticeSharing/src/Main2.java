@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Main2 {
 	public static void main(String[] args) {
-		// a = 1 ~ 5000 의 합
+		// a = 1 ~ 4999의 합
 		int a = 0;
 		for (int i = 0; i < 5000; i++) {
 			a += i;

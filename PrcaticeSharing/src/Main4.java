@@ -43,7 +43,7 @@ public class Main4 {
 		int t = 0;
 		int tool = 0;
 		int sum = 0;
-		// B 배열 하나가 다른수보다 작을때마다 +1해서 배열에 담기
+		// B 배열의 인덱스 하나가 다른 인덱스의 값보다 작을때마다 +1해서 C배열에 담기
 		for (int i = 0; i < B.length; i++) {
 			for (int j = 0; j < B.length; j++) {
 				if (i == j){
@@ -55,7 +55,7 @@ public class Main4 {
 			C[i] = count;
 			count = 0;
 		}
-		// 오름차순 정렬
+		// 오름차순 정렬 bubble sort
 		for (int i = 0; i < A.length; i++) {
 			for (int j = 0; j < A.length - 1; j++) {
 				if (A[j] > A[j + 1]) {

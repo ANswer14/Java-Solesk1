@@ -11,13 +11,13 @@ public class Main6 {
 	public static void main(String[] args) {
 		Scanner k = new Scanner(System.in);
 		int select = 0;
-		int realMoney = 100000;
-		int actualMoney = 0;
-		int count = 0;
+		long realMoney = 100000;
+		long actualMoney = 0;
+		long count = 0;
 		int powerAde = 3750;
-		int pokari = 2970;
-		int water = 1770;
-		int tool = 0;
+		long pokari = 2970;
+		long water = 1770;
+		long tool = 0;
 		String[] won = { "50000원", "10000원", "1000원", "500원", "100원", "10원" };
 		while (true) {
 			System.out.print("|1. 물건 구매|2. 거스름돈 정리|3. 종료|\n");
@@ -34,15 +34,15 @@ public class Main6 {
 						System.out.print("몇 개를 구매하시겠습니까?\n");
 						System.out.print("개수 입력 : ");
 						count = k.nextInt();
-						if (count > 0) {
+						if (count > 0 && realMoney > count * powerAde) {
 							realMoney -= count * powerAde;
 							System.out.printf("지불금액 : %,d\n"
 									+ "차액 : %,d\n", count * powerAde, realMoney);
 							break;
+						
 						}else {
 							System.err.println("오류");
 						}
-						
 					}
 					break;
 				}else if (select == 2) {
@@ -50,7 +50,7 @@ public class Main6 {
 						System.out.print("몇 개를 구매하시겠습니까?");
 						System.out.print("개수 입력 : ");
 						count = k.nextInt();
-						if (count > 0) {
+						if (count > 0 && realMoney > count * pokari) {
 							realMoney -= count * pokari;
 							System.out.printf("지불금액 : %,d\n"
 									+ "차액 : %,d\n", count * pokari, realMoney);
@@ -67,7 +67,7 @@ public class Main6 {
 						System.out.print("몇 개를 구매하시겠습니까?");
 						System.out.print("개수 입력 : ");
 						count = k.nextInt();
-						if (count > 0) {
+						if (count > 0 && realMoney > count * water) {
 							realMoney -= count * water;
 							System.out.printf("지불금액 : %,d\n"
 									+ "차액 : %,d\n", count * water, realMoney);
